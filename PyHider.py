@@ -3,6 +3,7 @@
 
 # NEED TO INSTALL #
 # - pyfiglet
+# - os
 # - colorama
 # - platform
 # - subprocess
@@ -83,15 +84,20 @@ def CheckOS():
 #        os.system("clear")
 #        Linux_CLEAR()
 # ---------------------------------------------------------------- #
-    print('+ --------------------------- +', ' '*10)
-    print(f'+ - {orange}Detected OS{reset} :' ,f'{green}{OperationSystem}{reset} - +')
+    print('                 + ------------------------------------ +')
+    print(f'                      +    - {orange}Detected OS{reset} :' ,f'{green}{OperationSystem}{reset} - +')
+    print('                 + ------------------------------------ +')
     if OperationSystem =="Linux":
-        print('\n(it is better in some cases than Windows 10)')
+        print('+ ---------------------------------------------------------------------- +')
+        print('   Great You have Linux OS (it is better in some cases than Windows 10)')
+        print('+ ---------------------------------------------------------------------- +')
         sleep(1)
         Kali_Linux()
         sleep(1)
     elif OperationSystem ==" Windows":
-        print('Bruhh ... Windows But OK Lets GO.')
+        print('+ ------------------------------------- +')
+        print('    Bruhh ... Windows But OK Lets GO.')
+        print('+ ------------------------------------- +')
         sleep(1)
         Windows_CLEAR()
         sleep(1)
@@ -107,18 +113,16 @@ colored_text = f"{Fore.GREEN}{big_text}{Fore.RESET}"
 print(colored_text)
 
 def UseMenu():
-    print(f'          [+] {green}Command --> Use {reset}[+]')
+    print(f'              [+] {green}Command --> Use {reset}[+]')
     print(f'+ --------------------------------------------------------- +')
-    print(f'+ Extr_Steg_Password --> GET Hidden Password FROM Image     +')
     print(f'+ Hide_Steg_Password --> HIDE Password TO Your Image        +')
+    print(f'+ Extr_Steg_Password --> GET Hidden Password FROM Image     +')
     print(f'+ -h or --help --> Show Again this for Help                 +')
     print(f'+ -e or exit for exit this script :D                        +')
     print(f'+ --------------------------------------------------------- +')
 
-# StegHide Commands
-Hide_Steg_Password = f'steghide embed -ef', {FileName}, '-cf', {ImageName}
-Extr_Steg_Password = f'steghide extract -sf', {ImageName}
-
+Directory = 'home/kali/Desktop/ToHide'
+OutputDirectory = 'home/kali/Desktop/Hidden'
 
 def MainMenu():
     print(f'{magenta}[{reset}{yellow}+{reset}{magenta}]{reset}', ' ', '-'*60, ' ', f'{magenta}[{reset}{yellow}+{reset}{magenta}]{reset}')
@@ -129,9 +133,28 @@ def MainMenu():
     FirstUserInput = input('--> ')
     if FirstUserInput =='-h' or FirstUserInput =='--help' or FirstUserInput =='help':
         UseMenu()
-    elif FirstUserInput == 'Extr_Steg_Password':
-        os.popen(StegCommand).read() 
+        # Path in Code for Hide 
+    elif FirstUserInput == 'Hide_Steg_Password':
+        print('Write name of TextFile')
+        TxtFileName = input('--> ')
+        print('Write new Pass Phrase (save it for Futute)')
+        password = input('--> ')
+        print('Write Image Name with ')
+        ImageName = input('--> ')
+        CommandForHide = f"steghide embed -ef {TxtFileName} -cf {ImageName} -p {password}"
 
+        
+        os.popen(CommandForHide).read()
+        # Path in Code for Show 
+    elif FirstUserInput =='Extr_Steg_Password':
+        print('Write name of TextFile')
+        TxtFileName = input('--> ')
+        print('Write new Pass Phrase (save it for Futute)')
+        password = input('--> ')
+        print('Write Image Name (with Image Exension)')
+        ImageName = input('--> ')
+        CommandForHide = f'steghide extract -sf {password} -p'
+        os.popen(CommandForHide).read()
 
 def Windows_10():
     Windows_CLEAR()
@@ -143,7 +166,6 @@ def Kali_Linux():
     MainMenu()
 
 
-while True:
-    CheckOS()
-    sleep(2)
-    MainMenu()
+CheckOS()
+sleep(2)
+MainMenu()
