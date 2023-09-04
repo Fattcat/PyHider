@@ -1,7 +1,15 @@
 # PyHider
 PyHider - Steghide Automation Software
-Goiong to add Send saved password In Image SOON ...
-#Fixed Bugs :
+Your New Generation of passwords
+# Commands
+
+# Will be added :
+- Send saved password In Image to Other PC using WiFi
+- Read SecretPassword inside specific Image (if there is)
+- 
+
+# Fixed Bugs :
 - Cant select option in input
 - Added nicer Main Menu
 - Other ...
+
