@@ -5,7 +5,7 @@
 ## Installation
 For Linux
 ```
-git clone https://github.com/Fattcat/PyHider
+git clone https://github.com/Fattcat/PyHider.git
 ```
 ```
 cd PyHider
