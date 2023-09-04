@@ -1,6 +1,6 @@
 # PyHider
-PyHider - Steghide Automation Software
-Your New Generation of passwords
+## Version 1.0.0
+### PyHider - Steghide Automation Software Your New Generation of protecting passwords
 
 # Commands
 
@@ -16,7 +16,7 @@ Hide_Steg_PasswordHIDE Password TO Your Image
 ```
 -h or --help       
 ```
-for exit this script :D
+- for exit this script :D
 ```
 -e or exit
 ```
@@ -27,7 +27,7 @@ for exit this script :D
 - Other and Much MORE
 
 # Fixed Bugs :
-- Cant select option in input
+- Cant select option in input field
 - Added nicer Main Menu
 - Other...
 
