@@ -2,6 +2,17 @@
 ## Version 1.0.0
 ### PyHider - Steghide Automation Software Your New Generation of protecting passwords
 
+## Installation
+For Linux
+```
+git clone https://github.com/Fattcat/PyHider
+```
+```
+cd PyHider
+```
+```
+python3 PyHider.py
+```
 # Commands
 
 - GET Hidden Password FROM Image
