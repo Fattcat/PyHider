@@ -85,7 +85,7 @@ def CheckOS():
 #        Linux_CLEAR()
 # ---------------------------------------------------------------- #
     print('                 + ------------------------------------ +')
-    print(f'                      +    - {orange}Detected OS{reset} :' ,f'{green}{OperationSystem}{reset} - +')
+    print(f'                         + - {orange}Detected OS{reset} :' ,f'{green}{OperationSystem}{reset} - +')
     print('                 + ------------------------------------ +')
     if OperationSystem =="Linux":
         print('+ ---------------------------------------------------------------------- +')
@@ -117,18 +117,16 @@ def UseMenu():
     print(f'+ --------------------------------------------------------- +')
     print(f'+ Hide_Steg_Password --> HIDE Password TO Your Image        +')
     print(f'+ Extr_Steg_Password --> GET Hidden Password FROM Image     +')
-    print(f'+ -h or --help --> Show Again this for Help                 +')
-    print(f'+ -e or exit for exit this script :D                        +')
+    print(f'+    -h or --help    --> Show Again this for Help           +')
+    print(f'+     -e or exit     --> exit this script :D                +')
     print(f'+ --------------------------------------------------------- +')
 
 Directory = 'home/kali/Desktop/ToHide'
 OutputDirectory = 'home/kali/Desktop/Hidden'
 
 def MainMenu():
-    print(f'{magenta}[{reset}{yellow}+{reset}{magenta}]{reset}', ' ', '-'*60, ' ', f'{magenta}[{reset}{yellow}+{reset}{magenta}]{reset}')
-    print(f'                        [-+-] Welcome to PyHider [-+-]')
-    print(f'{magenta}[{reset}{yellow}+{reset}{magenta}]{reset}' ,' ' *20 , f'Created by Fattcat' , ' '*20 , f'{magenta}[{reset}{yellow}+{reset}{magenta}]{reset}')
-    print(f'[+', ' ','-'*60,' ','+]')
+    print('[+] [-+-] Welcome to PyHider [-+-] [+]')
+    print(f' '*6, '[+]', f'{green}Created by Fattcat{reset}', '[+]')
     print(f'Select Option or type {green}-h{reset} or {green}--help{reset} for show available commands')
     FirstUserInput = input('--> ')
     if FirstUserInput =='-h' or FirstUserInput =='--help' or FirstUserInput =='help':
