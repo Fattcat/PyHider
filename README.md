@@ -3,22 +3,23 @@ PyHider - Steghide Automation Software
 Your New Generation of passwords
 
 # Commands
+
+- GET Hidden Password FROM Image
 ```
 Extr_Steg_Password
 ```
-GET Hidden Password FROM Image
+- HIDE Password TO Your Image
 ```
 Hide_Steg_PasswordHIDE Password TO Your Image
 ```
-HIDE Password TO Your Image
+- Show Again this for Help
 ```
 -h or --help       
 ```
-Show Again this for Help
+for exit this script :D
 ```
 -e or exit
 ```
-for exit this script :D
 
 # Will be added :
 - Send saved password In Image to Other PC using WiFi
